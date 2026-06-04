@@ -1,5 +1,5 @@
 {
-  "project_name": "Researchex-AI",
+  "project_name": "ResearchGPT",
   "description": "AI-powered Research Agent using IBM watsonx AI, IBM Granite Models, Langflow, and IBM Cloud Lite Services.",
   "domain": "Artificial Intelligence / NLP / Research Automation",
   "technologies_used": [
@@ -11,6 +11,6 @@
     "APIs"
   ],
   "project_type": "Research Agent",
-  "developer": "Gautam Kumar",
-  "github_repository": "https://github.com/theunstopabble/Researchex-AI"
+  "developer": "Suraj Bhan Pratap Singh",
+  "github_repository": "https://github.com/surajrajput999"
 }

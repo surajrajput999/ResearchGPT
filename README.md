@@ -1,12 +1,12 @@
-# Researchex-AI
+# ResearchGPT
 ### Smart AI-Powered Research Agent using IBM Granite & Langflow
 
 ---
 
 ## 📌 Project Overview
-**Researchex-AI** is an advanced Agentic AI system developed under the **IBM Skills Build for University Engagements (AICTE-2026)** program. It specifically addresses **Problem Statement No.1: Research Agent**. 
+**ResearchGPT** is an advanced Agentic AI system developed under the **IBM Skills Build for University Engagements (AICTE-2026)** program. It specifically addresses **Problem Statement No.1: Research Agent**. 
 
-The traditional research process involves manually scanning thousands of academic papers, summarizing complex literature, and managing extensive citations—a process that is highly time-consuming. **Researchex-AI** automates these core workflows by utilizing **Natural Language Processing (NLP)**, **Retrieval-Augmented Generation (RAG)**, and **Agentic Workflows** powered by **IBM Granite Models** via **IBM watsonx.ai**. It acts as an autonomous digital assistant for students, researchers, academics, and R&D professionals to accelerate scientific innovation.
+The traditional research process involves manually scanning thousands of academic papers, summarizing complex literature, and managing extensive citations—a process that is highly time-consuming. **ResearchGPT** automates these core workflows by utilizing **Natural Language Processing (NLP)**, **Retrieval-Augmented Generation (RAG)**, and **Agentic Workflows** powered by **IBM Granite Models** via **IBM watsonx.ai**. It acts as an autonomous digital assistant for students, researchers, academics, and R&D professionals to accelerate scientific innovation.
 
 ---
 
@@ -93,7 +93,7 @@ The traditional research process involves manually scanning thousands of academi
 ## 📂 Repository Directory Structure
 
 ```directory
-researchex-ai/
+ResearchGPT/
 ├── problem_statement.pdf                # Original AICTE problem statement guide
 ├── architecture-blueprint.png           # Visual system architecture diagram
 ├── project_presentation.pptx            # Technical presentation deck for evaluators
@@ -114,8 +114,8 @@ researchex-ai/
 ### Installation & Flow Ingestion
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/theunstopabble/Researchex-AI.git
-   cd Researchex-AI
+   git clone https://github.com/surajrajput999/ResearchGPT.git
+   cd ResearchGPT
    ```
 2. **Environment Variables Configuration:**
    Create a `.env` file in your project directory and set up your IBM Watsonx credentials:
@@ -128,7 +128,7 @@ researchex-ai/
    - Open your Langflow dashboard environment.
    - Click on **Upload / Import** and select the provided flow pipeline JSON from the repository source folder.
    - Ensure the API nodes are fully populated with your environmental keys.
-   - Build and run the entry node to start interacting with **Researchex-AI**.
+   - Build and run the entry node to start interacting with **ResearchGPT**.
 
 ---
 
@@ -143,8 +143,8 @@ researchex-ai/
 
 ## 👤 Developer & Contact Info
 
-- **Developer Name:** Gautam Kumar
-- **GitHub:** [@theunstopabble](https://github.com/theunstopabble)
-- **LinkedIn:** [gautamkr62](https://www.linkedin.com/in/gautamkr62/)
-- **Portfolio:** [gautam-kr.vercel.app](https://gautam-kr.vercel.app/)
+- **Developer Name:** Suraj Bhan Pratap Singh
+- **GitHub:** [surajrajput999](https://github.com/surajrajput999)
+- **LinkedIn:** [suraj-bhan-pratap-singh-891727293](https://www.linkedin.com/in/suraj-bhan-pratap-singh-891727293/)
+- **Portfolio:** [surajbhan.vercel.app](https://surajbhan.vercel.app/)
 - **Project Scope:** Submission for IBM Skills Build University Engagement (AICTE-2026)
