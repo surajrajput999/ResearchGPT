@@ -1,150 +1,134 @@
 # ResearchGPT
 ### Smart AI-Powered Research Agent using IBM Granite & Langflow
 
+<div align="center">
+
+![IBM Granite](https://img.shields.io/badge/IBM%20Granite-1261FE?style=for-the-badge&logo=ibm&logoColor=white)
+![Langflow](https://img.shields.io/badge/Langflow-0B0F19?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![AI](https://img.shields.io/badge/Agentic%20AI-6E56CF?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG-FF6B35?style=for-the-badge)
+
+**An AI-powered research agent designed to streamline literature discovery, document analysis, summarization and research workflows using IBM Granite and Langflow.**
+
+</div>
+
 ---
 
 ## 📌 Project Overview
-**ResearchGPT** is an advanced Agentic AI system developed under the **IBM Skills Build for University Engagements (AICTE-2026)** program. It specifically addresses **Problem Statement No.1: Research Agent**. 
 
-The traditional research process involves manually scanning thousands of academic papers, summarizing complex literature, and managing extensive citations—a process that is highly time-consuming. **ResearchGPT** automates these core workflows by utilizing **Natural Language Processing (NLP)**, **Retrieval-Augmented Generation (RAG)**, and **Agentic Workflows** powered by **IBM Granite Models** via **IBM watsonx.ai**. It acts as an autonomous digital assistant for students, researchers, academics, and R&D professionals to accelerate scientific innovation.
+**ResearchGPT** is an Agentic AI research project developed as part of the **IBM SkillsBuild for University Engagements (AICTE 2026)** program.
 
----
+The project addresses **Problem Statement No. 1 — Research Agent**, with the goal of reducing the manual effort involved in exploring academic literature, understanding technical documents and organizing research information.
 
-## 🎯 Key Objectives & Core Features
+ResearchGPT explores the use of:
 
-- **🌐 Autonomous Literature Retrieval:** Smartly searches, fetches, and parses relevant research papers and academic literature across multi-domain research databases based on simple natural language queries.
-- **📄 Advanced Document Summarization:** Condenses lengthy scientific articles, PDFs, and deep technical documents into precise, structured executive summaries highlighting hypotheses, methodologies, and key findings.
-- **📊 Automatic Insights & Hypothesis Generation:** Analyzes existing research data to suggest new exploration pathways, correlations, and automated hypothesis definitions.
-- **📑 Automated Citation & Reference Management:** Simplifies academic publishing workflows by automatically extracting metadata, formatting citations, and organizing bibliographies.
-- **📋 Structured Report Generation:** Dynamically builds comprehensive R&D reports, structured literature reviews, and drafts critical sections for research manuscripts.
+- **IBM Granite foundation models**
+- **IBM watsonx.ai**
+- **Langflow orchestration**
+- **Retrieval-Augmented Generation (RAG)**
+- **Natural Language Processing (NLP)**
+- **Agentic AI workflows**
 
----
+The system is designed around a research-assistant workflow where a natural-language research query can be processed through an orchestration layer, relevant information can be retrieved, and the resulting context can be passed to an AI reasoning model for structured research assistance.
 
-## 🏗️ System Architecture & Workflow
-
-### 🗺️ Architecture Blueprint
-![Architecture Blueprint](architecture-blueprint.png)
+> **Note:** This repository represents an academic/industry-program project and architectural prototype. Some capabilities described in the roadmap are planned extensions rather than currently deployed production features.
 
 ---
 
-### 💻 Data Flow & Component Interaction
+## 🎯 Objectives
 
-```
-[ User Input / Query ] 
-       │
-       ▼
-┌────────────────────────────────────────────────────────┐
-│               Langflow Orchestration Hub               │
-│  ┌───────────────────────┐   ┌──────────────────────┐  │
-│  │   Intent Classifier   │──>│ Query Optimizer Agent│  │
-│  └───────────────────────┘   └──────────────────────┘  │
-└────────────────────────────────────────────────────────┘
-       │
-       ├──────────────────────────────┐
-       ▼                              ▼
-┌──────────────────────────┐   ┌──────────────────────────┐
-│  Academic Search APIs    │   │ Vector Database (RAG)    │
-│  (ArXiv, PubMed, SemSch) │   │ (Document Embeddings)    │
-│  Fetch Literature / PDFs  │   │ Contextual Knowledge Base│
-└──────────────────────────┘   ┌──────────────────────────┐
-       │                              │
-       └──────────────┬───────────────┘
-                      │ (Context + Prompts)
-                      ▼
-┌────────────────────────────────────────────────────────┐
-│                     IBM watsonx.ai                     │
-│           🤖 IBM Granite Large Language Model          │
-└────────────────────────────────────────────────────────┘
-                      │
-                      ▼
-┌────────────────────────────────────────────────────────┐
-│                   Response Generation                  │
-│  ┌──────────────────────┐     ┌─────────────────────┐  │
-│  │  Structured Reports  │     │ Literature Summary  │  │
-│  └──────────────────────┘     └─────────────────────┘  │
-│  ┌──────────────────────┐     ┌─────────────────────┐  │
-│  │ Verified Citations   │     │ Derived Hypotheses  │  │
-│  └──────────────────────┘     └─────────────────────┘  │
-└────────────────────────────────────────────────────────┘
-```
+ResearchGPT focuses on improving common research workflows such as:
 
-### Detailed Workflow Execution:
-1. **User Query Processing:** The researcher inputs a natural language query or research question into the system.
-2. **Orchestration Layer (Langflow):** Langflow classifies the intent and triggers specialized sub-agents. It optimizes the prompt structures and determines whether external semantic searching or internal document parsing is required.
-3. **Data Retrieval & Ingestion:**
-   - **External Execution:** The agent interacts with research database APIs to scrape relevant metadata and document bodies.
-   - **Internal Execution (RAG):** Uploaded research articles are vectorized into numerical embeddings and indexed inside a high-performance vector store for strict, grounded contextual responses.
-4. **Cognitive LLM Processing (IBM watsonx.ai):** The accumulated context, along with optimized system prompts, is passed down to the **IBM Granite Model**. The model acts as the reasoning engine to process technical terminology, extract complex insights, and perform synthesis.
-5. **Output Generation:** the agent structures the final payload into human-readable text, downloadable reports, references, or synthesized comparative tables.
+- Discovering relevant academic literature
+- Processing technical documents
+- Summarizing research material
+- Extracting important findings
+- Organizing references and research information
+- Generating structured research outputs
+- Exploring AI-assisted hypothesis generation
+
+The broader objective is to demonstrate how **Agentic AI + RAG + enterprise LLM infrastructure** can be combined to support research-oriented workflows.
 
 ---
 
-## 🛠️ Technology Stack & Infrastructure
+## ✨ Core Capabilities
 
-- **Orchestration Framework:** Langflow (Multi-agent visual orchestration and pipeline construction)
-- **AI Reasoning Core Engine:** IBM watsonx.ai
-- **Foundational LLM:** IBM Granite Model (`ibm/granite-8b-code-instruct` optimized for enterprise and reasoning)
-- **Cloud Infrastructure:** IBM Cloud Lite Services (Watson Machine Learning, Object Storage)
-- **Programming Environment:** Python & Enterprise REST APIs
-- **Target Application Domain:** Artificial Intelligence / Natural Language Processing / Research Automation
+### 🌐 Research Query Processing
 
----
+Accepts natural-language research questions and processes them through an AI-oriented workflow.
 
-## 📂 Repository Directory Structure
+### 📄 Document & Literature Analysis
 
-```directory
-ResearchGPT/
-├── problem_statement.pdf                # Original AICTE problem statement guide
-├── architecture-blueprint.png           # Visual system architecture diagram
-├── project_presentation.pptx            # Technical presentation deck for evaluators
-├── app.json                             # Application configuration and technology metadata
-└── README.md                            # Comprehensive project overview and documentation
-```
+Designed to process research papers, technical documents and other research material to identify important information.
 
----
+### 🧠 AI-Powered Summarization
 
-## 🚀 Getting Started & Configuration
+Uses an LLM-based reasoning layer to generate concise, structured summaries from available research context.
 
-### Prerequisites
-- Python 3.10 or higher
-- An active **IBM Cloud Lite Account**
-- API Access credentials for **IBM watsonx.ai**
-- Langflow installed locally or accessible via cloud hosting
+### 🔎 Retrieval-Augmented Generation
 
-### Installation & Flow Ingestion
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/surajrajput999/ResearchGPT.git
-   cd ResearchGPT
-   ```
-2. **Environment Variables Configuration:**
-   Create a `.env` file in your project directory and set up your IBM Watsonx credentials:
-   ```env
-   WATSONX_APIKEY=your_ibm_cloud_api_key_here
-   WATSONX_PROJECT_ID=your_watsonx_project_id_here
-   WATSONX_URL=https://us-south.ml.cloud.ibm.com # Or your respective regional URL
-   ```
-3. **Import Flow into Langflow:**
-   - Open your Langflow dashboard environment.
-   - Click on **Upload / Import** and select the provided flow pipeline JSON from the repository source folder.
-   - Ensure the API nodes are fully populated with your environmental keys.
-   - Build and run the entry node to start interacting with **ResearchGPT**.
+The architecture supports retrieval of relevant contextual information before generation, helping ground AI responses in retrieved research material.
+
+### 📑 Research Information Structuring
+
+Designed to organize research findings into structured outputs such as summaries, references and research reports.
+
+### 💡 Research Exploration
+
+The system architecture can be extended toward AI-assisted insight discovery and hypothesis exploration.
 
 ---
 
-## 🔮 Future Scope & Roadmap
+# 🏗️ System Architecture
 
-- **🗣️ Voice-Driven Interactions:** Integrating speech-to-text and text-to-speech multi-modal channels for seamless hands-free scientific querying.
-- **📚 Real-Time Global Journal Sync:** Direct live synchronization hooks with premier closed-source and open-source scientific portals (like IEEE Xplore, ScienceDirect, and Springer Link).
-- **👥 Multi-Agent Collaborative Workspaces:** Developing independent agent sandboxes where multiple specialized agents (e.g., Data Analyst Agent, Code Review Agent, Technical Writer Agent) coordinate to write entire collaborative papers.
-- **📊 Interactive Data Visualization Modules:** Enabling automated generation of research graphs, visual trends, and comparative matrix dashboards derived dynamically from unstructured data arrays.
+## Architecture Blueprint
+
+![ResearchGPT Architecture](architecture-blueprint.png)
 
 ---
 
-## 👤 Developer & Contact Info
+## 🔄 Data Flow
 
-- **Developer Name:** Suraj Bhan Pratap Singh
-- **GitHub:** [surajrajput999](https://github.com/surajrajput999)
-- **LinkedIn:** [suraj-bhan-pratap-singh-891727293](https://www.linkedin.com/in/suraj-bhan-pratap-singh-891727293/)
-- **Portfolio:** [surajbhan.vercel.app](https://surajbhan.vercel.app/)
-- **Project Scope:** Submission for IBM Skills Build University Engagement (AICTE-2026)
+```text
+┌─────────────────────────────┐
+│       User Research Query   │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│      Langflow Workflow      │
+│  Orchestration & Routing    │
+└──────────────┬──────────────┘
+               │
+       ┌───────┴────────┐
+       ▼                ▼
+┌───────────────┐  ┌─────────────────┐
+│ Literature    │  │ Research        │
+│ Retrieval     │  │ Documents / RAG │
+│ APIs / Sources│  │ Context         │
+└───────┬───────┘  └────────┬────────┘
+        │                   │
+        └─────────┬─────────┘
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │    Context + Prompt  │
+       └──────────┬───────────┘
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │     IBM watsonx.ai   │
+       │                      │
+       │   IBM Granite Model  │
+       └──────────┬───────────┘
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │   Research Output    │
+       │                      │
+       │ • Summaries          │
+       │ • Insights           │
+       │ • References         │
+       │ • Structured Reports │
+       └──────────────────────┘
